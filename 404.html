@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 Not Found</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root{
+      --bg:#fff3f8;
+      --card:#ffffffcc;
+      --stroke:#ffd0e2;
+      --text:#2a2430;
+      --muted:#6a5a70;
+      --btn:#ff77b3;
+      --btn2:#ffffff;
+      --shadow:0 18px 40px rgba(0,0,0,.12);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 30% 10%, #ffe3f0 0%, var(--bg) 45%, #fff 100%);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+    .wrap{
+      width:min(980px, 100%);
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .wrap{ grid-template-columns:1fr; }
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+      backdrop-filter: blur(8px);
+    }
+
+    .art{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background: linear-gradient(180deg, rgba(255,210,230,.55), rgba(255,255,255,.0));
+    }
+    .art img{
+      width:100%;
+      max-width:560px;
+      height:auto;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.75);
+      box-shadow: 0 16px 38px rgba(0,0,0,.18);
+    }
+
+    .info{
+      padding:22px 22px 18px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      width:max-content;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background:#fff;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1;
+    }
+    .badge .dot{
+      width:10px;height:10px;border-radius:999px;background:var(--btn);
+      box-shadow:0 0 0 4px rgba(255,119,179,.18);
+    }
+
+    h1{
+      margin:4px 0 0;
+      font-size:32px;
+      letter-spacing:-.02em;
+    }
+    p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .actions{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:11px 14px;
+      border-radius:14px;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,.08);
+      transition: transform .08s ease, box-shadow .12s ease;
+      user-select:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    a.btn:active{ transform: translateY(1px); }
+
+    .primary{
+      background:var(--btn);
+      color:#fff;
+      box-shadow: 0 10px 22px rgba(255,119,179,.25);
+    }
+    .secondary{
+      background:var(--btn2);
+      color:var(--text);
+    }
+
+    .small{
+      margin-top:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      padding-top:12px;
+      border-top:1px dashed rgba(255,119,179,.35);
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .lang{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      border:1px solid rgba(0,0,0,.08);
+      background:#fff;
+      border-radius:999px;
+      padding:6px 8px;
+    }
+    .lang button{
+      border:0;
+      background:transparent;
+      cursor:pointer;
+      padding:4px 8px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .lang button.active{
+      background:rgba(255,119,179,.16);
+      color:#3b2a34;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card art" aria-label="404 illustration">
+      <!-- 이미지 경로만 네 프로젝트에 맞게 유지해줘 -->
+      <img src="/img/404.webp" alt="404 Not Found" />
+    </section>
+
+    <section class="card info">
+      <span class="badge"><span class="dot"></span><span id="badgeText">404 NOT FOUND</span></span>
+
+      <h1 id="titleText">길을 잃었어요…</h1>
+      <p id="descText">
+        입력한 주소가 잘못되었거나, 페이지가 이동/삭제되었을 수 있어요.<br />
+        아래 버튼으로 메인으로 돌아가거나, 이전 페이지로 돌아가주세요.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" id="homeBtn" href="/">메인으로 돌아가기</a>
+        <a class="btn secondary" id="backBtn" href="javascript:history.back()">이전 페이지</a>
+      </div>
+
+      <div class="small">
+        <span id="hintText">TIP: URL 철자를 한 번만 더 확인해줘요 🙏</span>
+
+        <div class="lang" aria-label="language toggle">
+          <button type="button" id="koBtn">한국어</button>
+          <button type="button" id="jaBtn">日本語</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // ---- 언어: 기존 사이트의 localStorage.lang(ko/ja)을 그대로 따라감 ----
+    const STR = {
+      ko: {
+        title: "길을 잃었어요…",
+        desc: "입력한 주소가 잘못되었거나, 페이지가 이동/삭제되었을 수 있어요.<br />아래 버튼으로 메인으로 돌아가거나, 이전 페이지로 돌아가주세요.",
+        home: "메인으로 돌아가기",
+        back: "이전 페이지",
+        hint: "TIP: URL 철자를 한 번만 더 확인해줘요 🙏",
+      },
+      ja: {
+        title: "迷子になっちゃった…",
+        desc: "URLが間違っているか、ページが移動/削除された可能性があります。<br />下のボタンからトップへ戻るか、前のページへ戻ってください。",
+        home: "トップへ戻る",
+        back: "前のページ",
+        hint: "TIP: URLのスペルをもう一度だけ確認してね 🙏",
+      }
+    };
+
+    function getLang(){
+      const v = localStorage.getItem("lang");
+      return (v === "ja" || v === "ko") ? v : "ko";
+    }
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "ja") ? "ja" : "ko";
+
+      document.getElementById("titleText").textContent = STR[lang].title;
+      document.getElementById("descText").innerHTML = STR[lang].desc;
+      document.getElementById("homeBtn").textContent = STR[lang].home;
+      document.getElementById("backBtn").textContent = STR[lang].back;
+      document.getElementById("hintText").textContent = STR[lang].hint;
+
+      document.getElementById("koBtn").classList.toggle("active", lang === "ko");
+      document.getElementById("jaBtn").classList.toggle("active", lang === "ja");
+
+      // 탭 제목도 같이
+      document.title = (lang === "ja") ? "404 Not Found" : "404 Not Found";
+    }
+
+    document.getElementById("koBtn").addEventListener("click", () => setLang("ko"));
+    document.getElementById("jaBtn").addEventListener("click", () => setLang("ja"));
+
+    setLang(getLang());
+  </script>
+</body>
+</html>

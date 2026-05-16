@@ -1,0 +1,27 @@
+# OS
+.claude/
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Cloudflare Workers (not needed for static site)
+wrangler.toml
+src/
+
+# Configuration files with sensitive data
+config.json

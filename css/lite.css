@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #4a2640;
+    background: #fff5fa;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* ヘッダー */
+header {
+    background: #ffc0e3;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(255, 182, 218, 0.25);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-twitter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-twitter:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+.btn-twitter svg {
+    display: block;
+}
+
+.btn-discord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-discord:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+.btn-discord svg {
+    display: block;
+}
+
+.btn-back {
+    padding: 5px 12px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-back:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 15px 0;
+}
+
+.controls {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #ffc0e3;
+}
+
+.filter-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.count {
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+}
+
+/* テーブル */
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+thead {
+    background: #ffe4f1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+th {
+    padding: 8px 6px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+th:hover {
+    background: #ffd1e8;
+}
+
+th.sorted-asc::after {
+    content: ' ▲';
+    font-size: 10px;
+}
+
+th.sorted-desc::after {
+    content: ' ▼';
+    font-size: 10px;
+}
+
+td {
+    padding: 6px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:hover {
+    background: #fff0f7;
+}
+
+tbody tr.hidden {
+    display: none;
+}
+
+/* リンク */
+a {
+    color: #ff9acf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* バッジ */
+.badge {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-official {
+    background: #ffe4f1;
+    color: #c2185b;
+}
+
+.badge-unofficial {
+    background: #fce4ec;
+    color: #880e4f;
+}
+
+.badge-yes {
+    background: #f0f4c3;
+    color: #558b2f;
+}
+
+.badge-no {
+    background: #ffccdd;
+    color: #c2185b;
+}
+
+/* フッター */
+footer {
+    padding: 10px 0;
+    text-align: right;
+    background: #4a2640;
+    color: white;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+}
