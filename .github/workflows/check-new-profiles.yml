@@ -36,15 +36,15 @@ jobs:
       - name: Summary
         if: steps.check.outcome == 'failure'
         run: |
-          echo "## 🔔 新しいプロファイルが見つかりました" >> $GITHUB_STEP_SUMMARY
+          echo "## 🔔 새로운 프로필을 찾았습니다" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Discord通知を送信しました。" >> $GITHUB_STEP_SUMMARY
+          echo "Discord 알림을 보냈습니다." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "サイト: https://mochifitter.eringi.me" >> $GITHUB_STEP_SUMMARY
+          echo "사이트: https://mochifitter.vr-chat.kr" >> $GITHUB_STEP_SUMMARY
       
       - name: Summary (No new profiles)
         if: steps.check.outcome == 'success'
         run: |
-          echo "## ✅ 新しいプロファイルはありません" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ 새로운 프로필이 없습니다" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "すべてのプロファイルが登録済みです。" >> $GITHUB_STEP_SUMMARY
+          echo "모든 프로필이 등록되어 있습니다." >> $GITHUB_STEP_SUMMARY
