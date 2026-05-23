@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23 22:18:39 JST",
+  "lastUpdated": "2026-05-23 22:21:44 JST",
   "profiles": [
     {
       "id": "001",
@@ -27316,7 +27316,7 @@
     {
       "id": "848",
       "registeredDate": "2026-01-09 00:33:49",
-      "updatedDate": "2026-01-09 00:34:21",
+      "updatedDate": "2026-05-23",
       "avatarName": "Natume-夏目-",
       "avatarNameUrl": "https://annyon-3d.booth.pm/items/7639287",
       "profileVersion": "1.0",
@@ -27329,16 +27329,16 @@
       "profileAuthorUrl": "https://annyon-3d.booth.pm/",
       "official": true,
       "downloadMethod": "Booth",
-      "downloadLocation": "",
+      "downloadLocation": "https://annyon-3d.booth.pm/items/7639287",
       "imageUrl": "https://booth.pximg.net/c/620x620/171e3d44-a1a0-4407-955f-cfebe5f95649/i/7639287/f879bf1f-ec8a-4ee9-9943-8a9f79411e12_base_resized.jpg",
-      "pricing": "未対応",
+      "pricing": "アバター同梱",
       "price": "-",
       "avatarPrice": "4000",
       "onSale": false,
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": "",
-      "forwardSupport": false,
+      "forwardSupport": true,
       "reverseSupport": false,
       "notes": "「もちふぃった～」には1月中を目標に対応予定です。"
     },
