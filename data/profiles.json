@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-24 06:55:18 JST",
+  "lastUpdated": "2026-05-24 06:57:01 JST",
   "profiles": [
     {
       "id": "001",
@@ -8945,10 +8945,10 @@
       "profileAuthorUrl": "https://kanzumezzz.booth.pm/",
       "official": true,
       "downloadMethod": "Booth",
-      "downloadLocation": "",
+      "downloadLocation": "https://kanzumezzz.booth.pm/items/7670356",
       "imageUrl": "https://booth.pximg.net/c/620x620/66e44db3-1e70-427e-ba0c-5d35f8af2b12/i/7670356/671d76be-bc48-4b13-914e-3ee69fcd5122_base_resized.jpg",
-      "pricing": "単体有料",
-      "price": "https://kanzumezzz.booth.pm/items/7691574",
+      "pricing": "アバター同梱",
+      "price": "-",
       "avatarPrice": "5000",
       "onSale": false,
       "saleStartDate": "",
