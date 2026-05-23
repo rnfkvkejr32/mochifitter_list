@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-24 08:32:28 JST",
+  "lastUpdated": "2026-05-24 08:37:19 JST",
   "profiles": [
     {
       "id": "001",
@@ -12886,6 +12886,35 @@
       "salePrice": "",
       "avatarshopname": "#happalog-はっぱろぐ！-",
       "profileshopname": "#happalog-はっぱろぐ！-"
+    },
+    {
+      "id": "1320",
+      "registeredDate": "2026-05-24",
+      "updatedDate": "2026-05-24",
+      "avatarName": "伊兎卯さん-itou",
+      "avatarNameUrl": "https://avatar.booth.pm/items/4841951\n",
+      "profileVersion": "1.0",
+      "avatarAuthor": "ブーゲンビリア",
+      "avatarshopname": "Boo Boo Bougainvillea",
+      "avatarAuthorUrl": "https://avatar.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "ブーゲンビリア",
+      "profileshopname": "Boo Boo Bougainvillea",
+      "profileAuthorUrl": "https://avatar.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://avatar.booth.pm/items/4841951\n",
+      "imageUrl": "https://booth.pximg.net/c/620x620/6d0e593b-faac-4c74-acb1-78b75614d85f/i/4841951/1b40051c-3909-4efe-9855-8731d7494cbf_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "7700",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "133",
