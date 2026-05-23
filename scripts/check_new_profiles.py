@@ -48,6 +48,29 @@ def collect_urls_from_searches(search_urls):
 
     return all_urls
 
+def load_all_avatar_name_url_ids(profiles_file):
+    """
+    profiles.json의 avatarNameUrl에서 item ID를 모두 가져옵니다.
+    official 값과 관계없이, 이미 알고 있는 아바타 본체 상품을 신규 후보에서 제외하기 위한 용도입니다.
+    """
+    item_ids = set()
+
+    try:
+        with open(profiles_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        for profile in data.get("profiles", []):
+            avatar_url = profile.get("avatarNameUrl", "")
+            item_id = extract_item_id_from_url(avatar_url)
+            if item_id:
+                item_ids.add(item_id)
+
+    except FileNotFoundError:
+        print(f"경고: {profiles_file} 파일을 찾을 수 없습니다")
+    except json.JSONDecodeError:
+        print(f"경고: {profiles_file} JSON 파싱에 실패했습니다")
+
+    return item_ids
 
 def find_unregistered_items(booth_mapping, profiles_file, block_file, avatar_file):
     """
@@ -66,6 +89,8 @@ def find_unregistered_items(booth_mapping, profiles_file, block_file, avatar_fil
 
     # profiles.json에서 등록된 ID 가져오기
     profile_ids = load_profiles_urls(profiles_file)
+    avatar_name_ids = load_all_avatar_name_url_ids(profiles_file)
+    profile_ids = profile_ids | avatar_name_ids
 
     # Block_URLs.txt에서 제외 ID 가져오기
     block_ids = load_block_urls(block_file)

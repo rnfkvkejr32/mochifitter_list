@@ -25,3 +25,16 @@ src/
 
 # Configuration files with sensitive data
 config.json
+__pycache__/
+*.pyc
+*.bak.*
+
+# Local/generated files
+unregistered_avatars.txt
+audit_unregistered_*.txt
+run_check_new_profiles_local.sh
+scripts/__pycache__/
+*.pyc
+
+# Local binary tools
+MochiFitter-ProfileEditor.exe
