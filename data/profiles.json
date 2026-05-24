@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-24 18:22:10 JST",
+  "lastUpdated": "2026-05-25 00:20:27 JST",
   "profiles": [
     {
       "id": "001",
@@ -12970,6 +12970,35 @@
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1323",
+      "registeredDate": "2026-05-25",
+      "updatedDate": "2026-05-25",
+      "avatarName": "2日間VRC 柳桜子",
+      "avatarNameUrl": "https://sumomiya.booth.pm/items/8403177",
+      "profileVersion": "1.0",
+      "avatarAuthor": "すも宮",
+      "avatarshopname": "すもみ屋",
+      "avatarAuthorUrl": "https://sumomiya.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "すも宮",
+      "profileshopname": "すもみ屋",
+      "profileAuthorUrl": "https://sumomiya.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://sumomiya.booth.pm/items/8403177",
+      "imageUrl": "https://booth.pximg.net/c/620x620/dc4bee90-d150-4496-8f85-6ceb56fffb2e/i/8403177/f0896e5b-e641-4bd6-9921-cd23b4e0d059_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "500",
+      "onSale": true,
+      "saleStartDate": "2026-05-24",
+      "saleEndDate": "2026-05-26",
+      "salePrice": "0",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
