@@ -37,4 +37,4 @@ scripts/__pycache__/
 *.pyc
 
 # Local binary tools
-MochiFitter-ProfileEditor.exe
+MochiFitterProfileEditor.exe
