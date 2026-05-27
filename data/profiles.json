@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27 13:12:26 JST",
+  "lastUpdated": "2026-05-27 14:22:56 JST",
   "profiles": [
     {
       "id": "001",
@@ -6134,8 +6134,8 @@
     {
       "id": "1106",
       "registeredDate": "2026-05-23",
-      "updatedDate": "2026-05-23",
-      "avatarName": "・Quest対応シスター・ノンネ",
+      "updatedDate": "2026-05-27",
+      "avatarName": "ノンネ-nonne",
       "avatarNameUrl": "https://663-chanshop.booth.pm/items/5340971",
       "profileVersion": "1.0",
       "avatarAuthor": "ロロミ",
@@ -6144,14 +6144,21 @@
       "profileAuthor": "ロロミ",
       "profileAuthorUrl": "https://663-chanshop.booth.pm/",
       "downloadMethod": "Booth",
-      "downloadLocation": "https://663-chanshop.booth.pm/items/7703298",
+      "downloadLocation": "https://663-chanshop.booth.pm/items/5340971",
       "imageUrl": "https://booth.pximg.net/c/620x620/4607dca7-2c37-4556-910f-fc587d169571/i/5340971/1232cade-8716-4fd6-bffc-d5a26cd1c5e3_base_resized.jpg",
-      "pricing": "無料",
-      "price": "0",
+      "pricing": "アバター同梱",
+      "price": "-",
       "notes": "",
       "official": true,
       "forwardSupport": true,
-      "reverseSupport": false
+      "reverseSupport": false,
+      "avatarshopname": "ロロミ",
+      "profileshopname": "ロロミ",
+      "avatarPrice": "0",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": ""
     },
     {
       "id": "1107",
