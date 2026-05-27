@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27 09:56:01 JST",
+  "lastUpdated": "2026-05-27 09:56:41 JST",
   "profiles": [
     {
       "id": "001",
@@ -11987,11 +11987,11 @@
       "imageUrl": "https://booth.pximg.net/c/620x620/4fef6d30-5a9e-4a4c-a16d-a5bd6897fee1/i/8139707/e58d9e71-f940-4bbd-82e6-0a9bda74d104_base_resized.jpg",
       "pricing": "無料",
       "price": "0",
-      "avatarPrice": "1500",
-      "onSale": false,
-      "saleStartDate": "",
-      "saleEndDate": "",
-      "salePrice": "",
+      "avatarPrice": "5900",
+      "onSale": true,
+      "saleStartDate": "2026-05-22",
+      "saleEndDate": "2026-06-07",
+      "salePrice": "1500",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
