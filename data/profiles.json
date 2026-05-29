@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-29 17:44:15 JST",
+  "lastUpdated": "2026-05-29 20:50:09 JST",
   "profiles": [
     {
       "id": "001",
@@ -13354,6 +13354,35 @@
       "saleStartDate": "2026-05-28",
       "saleEndDate": "2026-05-29",
       "salePrice": "4000",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1335",
+      "registeredDate": "2026-05-29",
+      "updatedDate": "2026-05-29",
+      "avatarName": "クレン",
+      "avatarNameUrl": "https://freezerkari.booth.pm/items/7777776",
+      "profileVersion": "1.0",
+      "avatarAuthor": "いせ",
+      "avatarshopname": "FreezerWorks",
+      "avatarAuthorUrl": "https://freezerkari.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "いせ",
+      "profileshopname": "FreezerWorks",
+      "profileAuthorUrl": "https://freezerkari.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://freezerkari.booth.pm/items/7777776",
+      "imageUrl": "https://booth.pximg.net/c/620x620/863e5748-28c0-4f65-a07c-130cc7ed8edd/i/7777776/b6f8c982-ccb1-4fa2-bee2-3a1750400c35_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "2000",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
