@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-28 22:13:42 JST",
+  "lastUpdated": "2026-05-29 16:11:19 JST",
   "profiles": [
     {
       "id": "001",
@@ -13326,6 +13326,35 @@
       "saleEndDate": "2026-05-29",
       "salePrice": "4000",
       "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1334",
+      "registeredDate": "2026-05-29",
+      "updatedDate": "2026-05-29",
+      "avatarName": "リンネ - Linne - /",
+      "avatarNameUrl": "https://liriririope.booth.pm/items/8355117",
+      "profileVersion": "1.0",
+      "avatarAuthor": "ʟiʀɪᴏᴘᴇ",
+      "avatarshopname": "ʟɪʀɪᴏᴘᴇ",
+      "avatarAuthorUrl": "https://liriririope.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "M-0LT",
+      "profileshopname": "- Moltek -",
+      "profileAuthorUrl": "https://mochiprofile.booth.pm/",
+      "official": false,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://mochiprofile.booth.pm/items/8426262",
+      "imageUrl": "https://booth.pximg.net/c/620x620/27f3825d-3be4-439e-b9c2-b5fe342ae949/i/8355117/89a0754d-2e2d-4ec3-a3fa-a46b3673cdb9_base_resized.jpg",
+      "pricing": "単体有料",
+      "price": "300",
+      "avatarPrice": "5500",
+      "onSale": true,
+      "saleStartDate": "2026-05-28",
+      "saleEndDate": "2026-05-29",
+      "salePrice": "4000",
+      "forwardSupport": false,
       "reverseSupport": false,
       "notes": ""
     },
