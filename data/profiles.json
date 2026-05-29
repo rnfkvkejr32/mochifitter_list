@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-29 16:11:19 JST",
+  "lastUpdated": "2026-05-29 16:12:28 JST",
   "profiles": [
     {
       "id": "001",
@@ -13354,7 +13354,7 @@
       "saleStartDate": "2026-05-28",
       "saleEndDate": "2026-05-29",
       "salePrice": "4000",
-      "forwardSupport": false,
+      "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
     },
