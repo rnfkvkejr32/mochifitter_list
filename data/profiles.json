@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-30 20:17:05 JST",
+  "lastUpdated": "2026-05-30 20:33:13 JST",
   "profiles": [
     {
       "id": "001",
@@ -13472,6 +13472,35 @@
       "salePrice": "",
       "forwardSupport": true,
       "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1339",
+      "registeredDate": "2026-05-30",
+      "updatedDate": "2026-05-30",
+      "avatarName": "パニャラ-Panyala",
+      "avatarNameUrl": "https://waflan.booth.pm/items/8345423",
+      "profileVersion": "1.0",
+      "avatarAuthor": "ひょぷ",
+      "avatarshopname": "ひょぷりっくすCreate",
+      "avatarAuthorUrl": "https://waflan.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "ひょぷ",
+      "profileshopname": "ひょぷりっくすCreate",
+      "profileAuthorUrl": "https://waflan.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://waflan.booth.pm/items/8345423",
+      "imageUrl": "https://booth.pximg.net/c/620x620/1eed442a-ffc3-4b3b-90d4-def36d4e9b0a/i/8345423/a082167b-3e98-4aa0-9fc3-a3ab85c185e4_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "3500",
+      "onSale": true,
+      "saleStartDate": "2026-05-30",
+      "saleEndDate": "2026-06-05",
+      "salePrice": "2500",
+      "forwardSupport": true,
+      "reverseSupport": true,
       "notes": ""
     },
     {
