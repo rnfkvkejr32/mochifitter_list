@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12 08:27:07 JST",
+  "lastUpdated": "2026-06-13 08:36:31 JST",
   "profiles": [
     {
       "id": "001",
@@ -15032,6 +15032,35 @@
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1388",
+      "registeredDate": "2026-06-13",
+      "updatedDate": "2026-06-13",
+      "avatarName": "🎉期間限定セール中🎉少年素体ANM=BODYVRC",
+      "avatarNameUrl": "https://anomanice.booth.pm/items/8501180",
+      "profileVersion": "1.0",
+      "avatarAuthor": "Anoma",
+      "avatarshopname": "ANMNMM",
+      "avatarAuthorUrl": "https://anomanice.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "Anoma",
+      "profileshopname": "ANMNMM",
+      "profileAuthorUrl": "https://anomanice.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://anomanice.booth.pm/items/8501180",
+      "imageUrl": "https://booth.pximg.net/c/620x620/5d2f52b0-3a5e-4930-a874-ad1a7b5c47ad/i/8501180/0ae5cb13-9214-40ec-8b6b-7213980ce2af_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "3000",
+      "onSale": true,
+      "saleStartDate": "2026-06-12",
+      "saleEndDate": "2026-06-18",
+      "salePrice": "2500",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
