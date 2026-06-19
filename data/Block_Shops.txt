@@ -1,8 +1,7 @@
-# ブロックしたい Booth ショップを1行ずつ記入
-# 以下のどの形式でもOK:
+# 이 파일에 적힌 Booth shop은 전체 차단됩니다.
+# 아래 셋 중 아무 형태로 써도 동일하게 처리됩니다.
 # daikonryu
 # daikonryu.booth.pm
-# https://daikonryu.booth.pm/
 # https://daikonryu.booth.pm/*
 
-daikonryu
+https://daikonryu.booth.pm/*

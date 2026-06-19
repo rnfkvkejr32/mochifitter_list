@@ -16,8 +16,10 @@ from booth_url_extractor import extract_booth_urls
 from diff_checker import (
     extract_item_id_from_url,
     extract_shop_name_from_url,
+    filter_mapping_by_block_shops,
+    load_block_shops,
     load_profiles_urls,
-    load_block_urls
+    load_block_urls,
 )
 
 
@@ -48,6 +50,7 @@ def collect_urls_from_searches(search_urls):
 
     return all_urls
 
+
 def load_all_avatar_name_url_ids(profiles_file):
     """
     profiles.json의 avatarNameUrl에서 item ID를 모두 가져옵니다.
@@ -72,7 +75,8 @@ def load_all_avatar_name_url_ids(profiles_file):
 
     return item_ids
 
-def find_unregistered_items(booth_mapping, profiles_file, block_file, avatar_file):
+
+def find_unregistered_items(booth_mapping, profiles_file, block_file, avatar_file, block_shop_file):
     """
     아직 등록되지 않은 아이템을 찾습니다.
 
@@ -81,24 +85,28 @@ def find_unregistered_items(booth_mapping, profiles_file, block_file, avatar_fil
         profiles_file: profiles.json 경로
         block_file: Block_URLs.txt 경로
         avatar_file: Avatar_URLs.txt 경로
+        block_shop_file: Block_Shops.txt 경로
 
     Returns:
         list: 미등록 아이템의 (shop_name, url) 튜플 목록
     """
-    booth_ids = set(booth_mapping.keys())
-
     # profiles.json에서 등록된 ID 가져오기
     profile_ids = load_profiles_urls(profiles_file)
     avatar_name_ids = load_all_avatar_name_url_ids(profiles_file)
     profile_ids = profile_ids | avatar_name_ids
 
-    # Block_URLs.txt에서 제외 ID 가져오기
+    # Block 파일들에서 제외 ID / shop 가져오기
     block_ids = load_block_urls(block_file)
-
-    # Avatar_URLs.txt에서 제외 ID 가져오기
     avatar_ids = load_block_urls(avatar_file)
+    block_shops = load_block_shops(block_shop_file)
 
-    print(f"\nBooth 검색 상품 수: {len(booth_ids)}")
+    # 샵 차단 적용
+    filtered_mapping = filter_mapping_by_block_shops(booth_mapping, block_shops)
+    booth_ids = set(filtered_mapping.keys())
+
+    print(f"\nBooth 검색 상품 수: {len(booth_mapping)}")
+    print(f"Block_Shops.txt 차단 샵 수: {len(block_shops)}")
+    print(f"샵 차단 적용 후 상품 수: {len(booth_ids)}")
     print(f"profiles.json에 등록된 상품 수: {len(profile_ids)}")
     print(f"Block_URLs.txt 차단 수: {len(block_ids)}")
     print(f"Avatar_URLs.txt 차단 수: {len(avatar_ids)}")
@@ -112,7 +120,7 @@ def find_unregistered_items(booth_mapping, profiles_file, block_file, avatar_fil
     # URL과 샵 이름 목록 생성
     url_list = []
     for item_id in diff_ids:
-        url = booth_mapping[item_id]
+        url = filtered_mapping[item_id]
         shop_name = extract_shop_name_from_url(url)
         url_list.append((shop_name, url))
 
@@ -146,16 +154,16 @@ def send_discord_notification(webhook_url, unregistered_items, site_url, mention
     if count >= 50:
         max_display = 10
     elif count >= 30:
-        max_display = 20
+        max_display = 15
     else:
-        max_display = 30
+        max_display = 20
 
     items_to_show = unregistered_items[:max_display]
     items_text = "\n".join([f"- {url}" for _, url in items_to_show])
 
     description_parts = [
         f"Booth에서 새로운 Mochifitter 대응 프로필이 **{count}건** 발견되었습니다.",
-        f"사이트 바로가기: {site_url}"
+        f"사이트 바로가기: {site_url}",
     ]
 
     if count > max_display:
@@ -222,6 +230,7 @@ def main():
     profiles_file = os.path.join(base_dir, "data", "profiles.json")
     block_file = os.path.join(base_dir, "data", "Block_URLs.txt")
     avatar_file = os.path.join(base_dir, "data", "Avatar_URLs.txt")
+    block_shop_file = os.path.join(base_dir, "data", "Block_Shops.txt")
     output_file = os.path.join(base_dir, "unregistered_avatars.txt")
 
     # 환경 변수
@@ -238,7 +247,7 @@ def main():
     print("\n차이를 확인하는 중...")
     print("=" * 80)
     unregistered_items = find_unregistered_items(
-        booth_mapping, profiles_file, block_file, avatar_file
+        booth_mapping, profiles_file, block_file, avatar_file, block_shop_file
     )
 
     if unregistered_items:
