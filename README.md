@@ -1,92 +1,92 @@
-# もちふぃったープロファイル一覧
+# 모치피터 프로필 목록
 
-VRChat用アバターの「もちふぃったー」対応プロファイル情報をまとめた静的Webサイトと管理ツール群。
+VRChat용 아바타의 「모치피터」 대응 프로필 정보를 정리한 정적 웹사이트와 관리 도구 모음입니다.
 
-## 内容
+## 내용
 
-### Webページ
+### 웹페이지
 
-- **index.html** - メインの一覧ページ（検索・フィルター機能付き）
-- **lite.html** - 軽量版一覧ページ
-- **terms.html** - 利用規約ページ
+- **index.html** - 메인 목록 페이지(검색·필터 기능 포함)
+- **lite.html** - 경량판 목록 페이지
+- **terms.html** - 이용약관 페이지
 
-### 管理ツール
+### 관리 도구
 
-- **profile_editor.py** - プロファイル編集GUI
-- **booth_url_extractor.py** - Booth URLを抽出
-- **diff_checker.py** - プロファイルの差分チェック
-- **url_investigation.py** - URL調査ツール
-- **check_new_profiles.py** - 新規プロファイル自動チェック（GitHub Actions用）
+- **profile_editor.py** - 프로필 편집 GUI
+- **booth_url_extractor.py** - Booth URL 추출
+- **diff_checker.py** - 프로필 차이점 확인
+- **url_investigation.py** - URL 조사 도구
+- **check_new_profiles.py** - 신규 프로필 자동 확인(GitHub Actions용)
 
-### 開発ツール
+### 개발 도구
 
-- **scripts/server.py** - ローカル開発用HTTPサーバー
-- **scripts/start_server.bat** - サーバー起動用バッチファイル（Windows）
+- **scripts/server.py** - 로컬 개발용 HTTP 서버
+- **scripts/start_server.bat** - 서버 실행용 배치 파일(Windows)
 
-### データ
+### 데이터
 
-- **data/profiles.json** - プロファイル情報（アバター名、作者、配布場所など）
-- **data/Block_URLs.txt** - 除外するBooth商品URL（オプション）
-- **data/Avatar_URLs.txt** - 除外するアバターURL（オプション）
+- **data/profiles.json** - 프로필 정보(아바타명, 제작자, 배포처 등)
+- **data/Block_URLs.txt** - 제외할 Booth 상품 URL(선택 사항)
+- **data/Avatar_URLs.txt** - 제외할 아바타 URL(선택 사항)
 
-## ローカル開発サーバー
+## 로컬 개발 서버
 
-Webページをローカル環境で確認するための簡易HTTPサーバーを用意しています。
+웹페이지를 로컬 환경에서 확인하기 위한 간단한 HTTP 서버를 제공합니다.
 
-### 起動方法
+### 실행 방법
 
-#### Windows（バッチファイル）
+#### Windows(배치 파일)
 
-1. `scripts/start_server.bat` をダブルクリック
-2. 自動的にブラウザが開き、サイトが表示されます
-3. 終了するには、コンソールウィンドウで `Ctrl+C` を押してください
+1. `scripts/start_server.bat` 를 더블클릭
+2. 브라우저가 자동으로 열리고 사이트가 표시됩니다
+3. 종료하려면 콘솔 창에서 `Ctrl+C` 를 누르세요
 
-#### コマンドライン（全OS対応）
+#### 명령줄(모든 OS 지원)
 
 ```bash
-# 基本起動（ポート8000、ブラウザ自動オープン）
+# 기본 실행(포트 8000, 브라우저 자동 열기)
 python scripts/server.py
 
-# ポート番号を指定
+# 포트 번호 지정
 python scripts/server.py --port 3000
 
-# ブラウザを開かずに起動
+# 브라우저를 열지 않고 실행
 python scripts/server.py --no-browser
 
-# ヘルプを表示
+# 도움말 표시
 python scripts/server.py --help
 ```
 
-### アクセスURL
+### 접속 URL
 
-サーバー起動後、以下のURLでアクセスできます：
+서버 실행 후 아래 URL로 접속할 수 있습니다.
 
-- メインページ: `http://localhost:8000/`
-- 利用規約: `http://localhost:8000/terms.html`
-- 軽量版: `http://localhost:8000/lite.html`
+- 메인 페이지: `http://localhost:8000/`
+- 이용약관: `http://localhost:8000/terms.html`
+- 경량판: `http://localhost:8000/lite.html`
 
-### 必要な環境
+### 필요한 환경
 
-- Python 3.6以上（標準ライブラリのみ使用、追加パッケージ不要）
+- Python 3.6 이상(표준 라이브러리만 사용, 추가 패키지 불필요)
 
-## 自動チェック機能
+## 자동 확인 기능
 
-GitHub Actionsを使用して、Boothで新しいプロファイルを自動的にチェックします。
+GitHub Actions를 사용해 Booth의 새로운 프로필을 자동으로 확인합니다.
 
-**詳しいセットアップ方法は [SETUP_GUIDE.md](SETUP_GUIDE.md) を参照してください。**
+**자세한 설정 방법은 [SETUP_GUIDE.md](SETUP_GUIDE.md)를 참고하세요.**
 
-### 設定方法（概要）
+### 설정 방법(개요)
 
-1. **Discord Webhookの設定**
-   - Discordでチャンネルの設定からWebhook URLを取得
-   - GitHubリポジトリの Settings > Secrets and variables > Actions
-   - `DISCORD_WEBHOOK_URL` という名前でシークレットを追加
+1. **Discord Webhook 설정**
+   - Discord에서 채널 설정으로 들어가 Webhook URL을 가져옵니다
+   - GitHub 저장소의 Settings > Secrets and variables > Actions 로 이동합니다
+   - `DISCORD_WEBHOOK_URL` 이름으로 시크릿을 추가합니다
 
-2. **実行スケジュール**
-   - 2時間ごとに自動実行
-   - 手動実行も可能（Actions タブから「Check New Booth Profiles」を選択）
+2. **실행 일정**
+   - 2시간마다 자동 실행됩니다
+   - 수동 실행도 가능합니다(Actions 탭에서 `Check New Booth Profiles` 선택)
 
-3. **チェック対象URL**
+3. **확인 대상 URL**
    - `https://booth.pm/ja/browse/3Dキャラクター?q=もちふぃった`
    - `https://booth.pm/ja/browse/3Dキャラクター?q=mochifitter`
    - `https://booth.pm/ja/browse/3Dモデル（その他）?q=もちふぃった`
@@ -96,87 +96,87 @@ GitHub Actionsを使用して、Boothで新しいプロファイルを自動的�
    - `https://booth.pm/ja/browse/VRoid?q=もちふぃった`
    - `https://booth.pm/ja/browse/VRoid?q=mochifitter`
 
-### 動作
+### 동작 방식
 
-1. 上記の検索URLから商品URLを収集
-2. `profiles.json`、`Block_URLs.txt`、`Avatar_URLs.txt` と照合
-3. 未登録の商品があれば：
-   - Discord Webhookで通知
-   - `unregistered_avatars.txt` をArtifactとして保存（30日間）
-4. 未登録の商品がなければ正常終了
+1. 위 검색 URL에서 상품 URL을 수집합니다
+2. `profiles.json`, `Block_URLs.txt`, `Avatar_URLs.txt`와 대조합니다
+3. 미등록 상품이 있으면:
+   - Discord Webhook으로 알림을 보냅니다
+   - `unregistered_avatars.txt`를 Artifact로 저장합니다(30일간)
+4. 미등록 상품이 없으면 정상 종료합니다
 
-## 登録作業フロー
+## 등록 작업 흐름
 
 ```mermaid
 flowchart TD
-    Start([事前準備]) --> Setup[profile_editor.py起動]
-    Setup --> Search[BOOTHでキーワード検索<br/>もちふぃった～ mochifitter等]
-    Search --> Extract[booth_url_extractor.py実行<br/>→ booth_urls.txt]
-    Extract --> Diff[diff_checker.py実行<br/>→ unregistered_avatars.txt]
-    Diff --> Investigate[url_investigation.pyで次へ<br/>URLを開く]
+    Start([사전 준비]) --> Setup[profile_editor.py 실행]
+    Setup --> Search[BOOTH에서 키워드 검색<br/>もちふぃった～ mochifitter 등]
+    Search --> Extract[booth_url_extractor.py 실행<br/>→ booth_urls.txt]
+    Extract --> Diff[diff_checker.py 실행<br/>→ unregistered_avatars.txt]
+    Diff --> Investigate[url_investigation.py로 진행<br/>URL 열기]
 
-    Investigate --> CheckURL{目視判定}
-    CheckURL -->|1.非登録対象<br/>衣装/テクスチャ等| Block[ブロック登録<br/>Block_URLs.txt]
-    CheckURL -->|2.非公式<br/>変換プロファイル| UnofficialSearch[対応アバター手動検索・調査<br/>どのアバター用か特定]
-    CheckURL -->|3.公式<br/>アバターURL| Official[レコード追加<br/>自動入力: ID/登録日/更新日/配布場所Booth]
+    Investigate --> CheckURL{육안 판별}
+    CheckURL -->|1. 등록 제외 대상<br/>의상/텍스처 등| Block[차단 등록<br/>Block_URLs.txt]
+    CheckURL -->|2. 비공식<br/>변환 프로필| UnofficialSearch[대응 아바타 수동 검색·조사<br/>어느 아바타용인지 특정]
+    CheckURL -->|3. 공식<br/>아바타 URL| Official[레코드 추가<br/>자동 입력: ID/등록일/업데이트일/배포처 Booth]
 
     Block --> Investigate
 
-    UnofficialSearch --> Unofficial[レコード追加<br/>自動入力: ID/登録日/更新日/配布場所Booth]
-    Unofficial --> UnofficialInput[アバターURLペースト<br/>取得ボタン押下]
-    UnofficialInput --> UnofficialAuto[自動入力:<br/>アバター名/作者/作者URL/画像URL]
-    UnofficialAuto --> UnofficialCheck[順方向/逆方向チェック]
-    UnofficialCheck --> UnofficialDist{配布場所}
+    UnofficialSearch --> Unofficial[레코드 추가<br/>자동 입력: ID/등록일/업데이트일/배포처 Booth]
+    Unofficial --> UnofficialInput[아바타 URL 붙여넣기<br/>가져오기 버튼 클릭]
+    UnofficialInput --> UnofficialAuto[자동 입력:<br/>아바타명/제작자/제작자 URL/이미지 URL]
+    UnofficialAuto --> UnofficialCheck[정방향/역방향 확인]
+    UnofficialCheck --> UnofficialDist{배포처}
 
-    UnofficialDist -->|Booth| UnofficialBooth[配布場所URLペースト<br/>取得ボタン押下]
-    UnofficialBooth --> UnofficialBoothAuto[自動入力:<br/>プロファイル作者/作者URL]
-    UnofficialBoothAuto --> UnofficialPrice{価格}
+    UnofficialDist -->|Booth| UnofficialBooth[배포처 URL 붙여넣기<br/>가져오기 버튼 클릭]
+    UnofficialBooth --> UnofficialBoothAuto[자동 입력:<br/>프로필 제작자/제작자 URL]
+    UnofficialBoothAuto --> UnofficialPrice{가격}
 
-    UnofficialPrice -->|2-A.有料| UnofficialPaid[単体有料選択<br/>価格手動入力]
-    UnofficialPrice -->|2-B.無料| UnofficialFree[無料ボタン押下<br/>価格 → 0]
+    UnofficialPrice -->|2-A. 유료| UnofficialPaid[단품 유료 선택<br/>가격 수동 입력]
+    UnofficialPrice -->|2-B. 무료| UnofficialFree[무료 버튼 클릭<br/>가격 → 0]
 
     UnofficialPaid --> AvatarPrice
     UnofficialFree --> AvatarPrice
 
-    UnofficialDist -->|Booth以外| UnofficialOther[配布場所URLペースト<br/>プロファイル作者/作者URL手動入力]
+    UnofficialDist -->|Booth 외| UnofficialOther[배포처 URL 붙여넣기<br/>프로필 제작자/제작자 URL 수동 입력]
     UnofficialOther --> AvatarPrice
 
-    Official --> OfficialInput[公式チェックON<br/>アバターURLペースト<br/>取得ボタン押下]
-    OfficialInput --> OfficialAuto[自動入力:<br/>アバター名/作者/作者URL<br/>プロファイル作者/作者URL/画像URL]
-    OfficialAuto --> OfficialCheck[順方向/逆方向チェック]
-    OfficialCheck --> OfficialDist{配布方法}
+    Official --> OfficialInput[공식 체크 ON<br/>아바타 URL 붙여넣기<br/>가져오기 버튼 클릭]
+    OfficialInput --> OfficialAuto[자동 입력:<br/>아바타명/제작자/제작자 URL<br/>프로필 제작자/제작자 URL/이미지 URL]
+    OfficialAuto --> OfficialCheck[정방향/역방향 확인]
+    OfficialCheck --> OfficialDist{배포 방식}
 
-    OfficialDist -->|3-A.同梱| OfficialBundle[アバター同梱ボタン押下<br/>価格 → -<br/>配布場所=アバターURL]
+    OfficialDist -->|3-A. 동봉| OfficialBundle[아바타 동봉 버튼 클릭<br/>가격 → -<br/>배포처=아바타 URL]
     OfficialBundle --> AvatarPrice
 
-    OfficialDist -->|3-B.同じページ| OfficialSamePage{価格}
-    OfficialSamePage -->|3-B-A.無料| OfficialSameFree[無料ボタン押下<br/>価格 → 0<br/>配布場所=アバターURL]
-    OfficialSamePage -->|3-B-B.有料| OfficialSamePaid[単体有料選択<br/>価格手動入力<br/>配布場所=アバターURL]
+    OfficialDist -->|3-B. 같은 페이지| OfficialSamePage{가격}
+    OfficialSamePage -->|3-B-A. 무료| OfficialSameFree[무료 버튼 클릭<br/>가격 → 0<br/>배포처=아바타 URL]
+    OfficialSamePage -->|3-B-B. 유료| OfficialSamePaid[단품 유료 선택<br/>가격 수동 입력<br/>배포처=아바타 URL]
 
     OfficialSameFree --> AvatarPrice
     OfficialSamePaid --> AvatarPrice
 
-    OfficialDist -->|3-C.別サイト<br/>GoogleDrive等| OfficialExternal[配布場所URLに外部リンクペースト<br/>プロファイル作者/作者URL手動入力]
+    OfficialDist -->|3-C. 별도 사이트<br/>GoogleDrive 등| OfficialExternal[배포처 URL에 외부 링크 붙여넣기<br/>프로필 제작자/제작자 URL 수동 입력]
     OfficialExternal --> AvatarPrice
 
-    AvatarPrice[アバター価格入力]
-    AvatarPrice --> Sale{セール?}
-    Sale -->|Yes| SaleInfo[セール中チェックON<br/>開始日/終了日/セール価格]
+    AvatarPrice[아바타 가격 입력]
+    AvatarPrice --> Sale{세일 여부?}
+    Sale -->|Yes| SaleInfo[세일 중 체크 ON<br/>시작일/종료일/세일 가격]
     Sale -->|No| Notes
     SaleInfo --> Notes
 
-    Notes[備考入力<br/>任意]
-    Notes --> Validate[入力状況パネルで<br/>必須項目チェック]
-    Validate --> Apply[変更を適用]
+    Notes[비고 입력<br/>선택 사항]
+    Notes --> Validate[입력 상태 패널에서<br/>필수 항목 확인]
+    Validate --> Apply[변경 사항 적용]
 
-    Apply --> Next{次のURL}
-    Next -->|あり| Investigate
-    Next -->|なし| Save[保存]
+    Apply --> Next{다음 URL}
+    Next -->|있음| Investigate
+    Next -->|없음| Save[저장]
 
-    Save --> Push[GitHubプッシュ]
-    Push --> End([完了])
+    Save --> Push[GitHub 푸시]
+    Push --> End([완료])
 ```
 
-## ライセンス
+## 라이선스
 
 MIT License
