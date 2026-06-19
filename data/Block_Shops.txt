@@ -1,0 +1,8 @@
+# ブロックしたい Booth ショップを1行ずつ記入
+# 以下のどの形式でもOK:
+# daikonryu
+# daikonryu.booth.pm
+# https://daikonryu.booth.pm/
+# https://daikonryu.booth.pm/*
+
+daikonryu
