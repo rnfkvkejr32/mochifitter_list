@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29 21:17:52 JST",
+  "lastUpdated": "2026-06-30 08:02:33 JST",
   "profiles": [
     {
       "id": "001",
@@ -16701,6 +16701,35 @@
       "avatarPrice": "5500",
       "avatarshopname": "Froginyata Store",
       "profileshopname": "Froginyata Store"
+    },
+    {
+      "id": "1440",
+      "registeredDate": "2026-06-30",
+      "updatedDate": "2026-06-30",
+      "avatarName": "フユノ - huyuno",
+      "avatarNameUrl": "https://anomarokoubou.booth.pm/items/2888810",
+      "profileVersion": "1.0",
+      "avatarAuthor": "アノマロかりんとう",
+      "avatarshopname": "アノマロ工房",
+      "avatarAuthorUrl": "https://anomarokoubou.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "アノマロかりんとう",
+      "profileshopname": "アノマロ工房",
+      "profileAuthorUrl": "https://anomarokoubou.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://anomarokoubou.booth.pm/items/2888810",
+      "imageUrl": "https://booth.pximg.net/c/620x620/364e0ee1-5df5-4f4e-8b1b-4da26b79ab35/i/2888810/ca5b2d7f-7aaa-4279-bf7b-3a01617cffab_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "6000",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "145",
