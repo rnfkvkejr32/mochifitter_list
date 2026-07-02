@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03 00:51:31 JST",
+  "lastUpdated": "2026-07-03 01:26:00 JST",
   "profiles": [
     {
       "id": "001",
@@ -17016,6 +17016,35 @@
       "avatarPrice": "6000",
       "avatarshopname": "Froginyata Store",
       "profileshopname": "Froginyata Store"
+    },
+    {
+      "id": "1450",
+      "registeredDate": "2026-07-03",
+      "updatedDate": "2026-07-03",
+      "avatarName": "ロア-roa",
+      "avatarNameUrl": "https://jacaranda-revic.booth.pm/items/7640297",
+      "profileVersion": "1.0",
+      "avatarAuthor": "SYUN",
+      "avatarshopname": "aoiさくら工房",
+      "avatarAuthorUrl": "https://jacaranda-revic.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "SYUN",
+      "profileshopname": "aoiさくら工房",
+      "profileAuthorUrl": "https://jacaranda-revic.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://jacaranda-revic.booth.pm/items/7640297",
+      "imageUrl": "https://booth.pximg.net/a64a3b91-4118-4f95-9406-32f01e312fbe/i/7640297/011a95ff-d5b9-49ed-aec0-3bee9503697f_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "2000",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "146",
