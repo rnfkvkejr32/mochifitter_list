@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03 01:26:00 JST",
+  "lastUpdated": "2026-07-03 22:42:39 JST",
   "profiles": [
     {
       "id": "001",
@@ -17044,6 +17044,35 @@
       "salePrice": "",
       "forwardSupport": true,
       "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1451",
+      "registeredDate": "2026-07-03",
+      "updatedDate": "2026-07-03",
+      "avatarName": "銀髪スーツの悪魔 メイネーラ",
+      "avatarNameUrl": "https://avatar.booth.pm/items/8547624",
+      "profileVersion": "1.0",
+      "avatarAuthor": "ブーゲンビリア",
+      "avatarshopname": "Boo Boo Bougainvillea",
+      "avatarAuthorUrl": "https://avatar.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "ブーゲンビリア",
+      "profileshopname": "Boo Boo Bougainvillea",
+      "profileAuthorUrl": "https://avatar.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://avatar.booth.pm/items/8547624",
+      "imageUrl": "https://booth.pximg.net/c/620x620/6d0e593b-faac-4c74-acb1-78b75614d85f/i/8547624/88360845-1bd8-49ed-81f1-27906e347b82_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "9900",
+      "onSale": true,
+      "saleStartDate": "2026-07-03",
+      "saleEndDate": "2026-08-01",
+      "salePrice": "7700",
+      "forwardSupport": true,
+      "reverseSupport": true,
       "notes": ""
     },
     {
