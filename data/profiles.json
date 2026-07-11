@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11 23:02:46 JST",
+  "lastUpdated": "2026-07-12 02:32:50 JST",
   "profiles": [
     {
       "id": "001",
@@ -17822,6 +17822,35 @@
       "saleEndDate": "",
       "salePrice": "",
       "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1476",
+      "registeredDate": "2026-07-12",
+      "updatedDate": "2026-07-12",
+      "avatarName": "Leptoレプト",
+      "avatarNameUrl": "https://ragetake.booth.pm/items/8603638",
+      "profileVersion": "1.0",
+      "avatarAuthor": "らげたけのおみせ",
+      "avatarshopname": "らげたけのおみせ",
+      "avatarAuthorUrl": "https://ragetake.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "らげたけのおみせ",
+      "profileshopname": "らげたけのおみせ",
+      "profileAuthorUrl": "https://ragetake.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://ragetake.booth.pm/items/8603638",
+      "imageUrl": "https://booth.pximg.net/c/620x620/96ef0fd4-a352-46e3-8f16-59deaadb4c5a/i/8603638/0582d704-7929-49b5-8e6a-432d8487183c_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "4500",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": false,
       "reverseSupport": false,
       "notes": ""
     },
