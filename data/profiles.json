@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-27 00:40:41 JST",
+  "lastUpdated": "2026-07-27 07:56:17 JST",
   "profiles": [
     {
       "id": "001",
@@ -18805,6 +18805,35 @@
       "salePrice": "",
       "forwardSupport": true,
       "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1507",
+      "registeredDate": "2026-07-27",
+      "updatedDate": "2026-07-27",
+      "avatarName": "／CC0共通素体SiroinoSotai",
+      "avatarNameUrl": "https://siroinoworks.booth.pm/items/8268676",
+      "profileVersion": "1.0",
+      "avatarAuthor": "しろいの",
+      "avatarshopname": "siroinoworks",
+      "avatarAuthorUrl": "https://siroinoworks.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "エカケイソ",
+      "profileshopname": "エカシリコン",
+      "profileAuthorUrl": "https://ekasilicon.booth.pm/",
+      "official": false,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://siroinoworks.booth.pm/items/8268676",
+      "imageUrl": "https://booth.pximg.net/c/620x620/72b7f6ef-9050-482b-9fec-177d12c0ad71/i/8268676/4b4d55bc-0939-4bc6-a212-c79368f8a965_base_resized.jpg",
+      "pricing": "単体有料",
+      "price": "600",
+      "avatarPrice": "0",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": true,
       "notes": ""
     },
     {
