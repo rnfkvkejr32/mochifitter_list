@@ -2,6 +2,14 @@
 let allProfiles = [];
 let filteredProfiles = [];
 
+// 段階的レンダリング設定
+const PROFILES_PER_BATCH = 48;
+const LOAD_MORE_ROOT_MARGIN = '800px 0px';
+let renderedProfileCount = 0;
+let loadMoreObserver = null;
+let fallbackScrollAttached = false;
+let isRenderingBatch = false;
+
 // DOMContentLoaded時の初期化
 document.addEventListener('DOMContentLoaded', () => {
     loadProfiles();
@@ -93,7 +101,6 @@ function setupEventListeners() {
                 showNotesTooltip(event.target);
             }
         });
-
         profilesContainer.addEventListener('mouseout', (event) => {
             if (event.target.classList.contains('notes-badge')) {
                 hideNotesTooltip();
@@ -148,18 +155,18 @@ function extractBoothItemId(url) {
     if (!url || typeof url !== 'string') {
         return null;
     }
-    
+
     // BoothのURLかチェック
     if (!url.includes('booth.pm')) {
         return null;
     }
-    
+
     // /items/の後の数字を抽出
     const match = url.match(/\/items\/(\d+)/);
     if (match && match[1]) {
         return parseInt(match[1], 10);
     }
-    
+
     return null;
 }
 
@@ -184,7 +191,7 @@ function sortProfiles() {
         else if (field === 'avatarBoothId') {
             const aBoothId = extractBoothItemId(a.avatarNameUrl);
             const bBoothId = extractBoothItemId(b.avatarNameUrl);
-            
+
             // BoothのURLでない場合は最後に配置（非常に大きな値）
             aVal = aBoothId !== null ? aBoothId : Number.MAX_SAFE_INTEGER;
             bVal = bBoothId !== null ? bBoothId : Number.MAX_SAFE_INTEGER;
@@ -193,7 +200,7 @@ function sortProfiles() {
         else if (field === 'profileBoothId') {
             const aBoothId = extractBoothItemId(a.downloadLocation);
             const bBoothId = extractBoothItemId(b.downloadLocation);
-            
+
             // BoothのURLでない場合は最後に配置（非常に大きな値）
             aVal = aBoothId !== null ? aBoothId : Number.MAX_SAFE_INTEGER;
             bVal = bBoothId !== null ? bBoothId : Number.MAX_SAFE_INTEGER;
@@ -270,11 +277,14 @@ function applyFilters() {
     updateCount();
 }
 
-// プロファイルの描画
+// プロファイル一覧を先頭から描画し直す
 function renderProfiles() {
     const container = document.getElementById('profilesContainer');
-
     if (!container) return;
+
+    stopIncrementalRendering();
+    renderedProfileCount = 0;
+    container.innerHTML = '';
 
     // 空状態の確認
     if (filteredProfiles.length === 0) {
@@ -287,8 +297,116 @@ function renderProfiles() {
         return;
     }
 
-    // プロファイルカードの生成
-    container.innerHTML = filteredProfiles.map(profile => createProfileCard(profile)).join('');
+    ensureLoadMoreSentinel();
+    renderNextProfileBatch();
+    startIncrementalRendering();
+}
+
+// 次のプロファイル群だけを追加描画
+function renderNextProfileBatch() {
+    if (isRenderingBatch) return;
+
+    const container = document.getElementById('profilesContainer');
+    if (!container || renderedProfileCount >= filteredProfiles.length) {
+        stopIncrementalRendering();
+        return;
+    }
+
+    isRenderingBatch = true;
+
+    const nextEnd = Math.min(
+        renderedProfileCount + PROFILES_PER_BATCH,
+        filteredProfiles.length
+    );
+    const profilesToRender = filteredProfiles.slice(renderedProfileCount, nextEnd);
+
+    // 一度にDOMへ追加し、レイアウト計算回数を減らす
+    const template = document.createElement('template');
+    template.innerHTML = profilesToRender
+        .map(profile => createProfileCard(profile))
+        .join('');
+    container.appendChild(template.content);
+
+    renderedProfileCount = nextEnd;
+    isRenderingBatch = false;
+
+    if (renderedProfileCount >= filteredProfiles.length) {
+        stopIncrementalRendering();
+    }
+}
+
+// 一覧の直後に無限スクロール用の監視要素を作成
+function ensureLoadMoreSentinel() {
+    let sentinel = document.getElementById('profilesLoadMoreSentinel');
+    if (sentinel) return sentinel;
+
+    const container = document.getElementById('profilesContainer');
+    if (!container || !container.parentNode) return null;
+
+    sentinel = document.createElement('div');
+    sentinel.id = 'profilesLoadMoreSentinel';
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.width = '100%';
+    sentinel.style.height = '1px';
+    sentinel.style.pointerEvents = 'none';
+    sentinel.style.visibility = 'hidden';
+    container.insertAdjacentElement('afterend', sentinel);
+
+    return sentinel;
+}
+
+// IntersectionObserver対応ブラウザでは画面下部への接近を監視
+function startIncrementalRendering() {
+    if (renderedProfileCount >= filteredProfiles.length) return;
+
+    const sentinel = ensureLoadMoreSentinel();
+    if (!sentinel) return;
+
+    if ('IntersectionObserver' in window) {
+        loadMoreObserver = new IntersectionObserver((entries) => {
+            if (entries.some(entry => entry.isIntersecting)) {
+                renderNextProfileBatch();
+            }
+        }, {
+            root: null,
+            rootMargin: LOAD_MORE_ROOT_MARGIN,
+            threshold: 0
+        });
+        loadMoreObserver.observe(sentinel);
+        return;
+    }
+
+    // 古いブラウザ向けフォールバック
+    if (!fallbackScrollAttached) {
+        window.addEventListener('scroll', handleFallbackScroll, { passive: true });
+        window.addEventListener('resize', handleFallbackScroll, { passive: true });
+        fallbackScrollAttached = true;
+    }
+}
+
+// IntersectionObserverがない場合だけ使用するスクロール監視
+function handleFallbackScroll() {
+    const sentinel = document.getElementById('profilesLoadMoreSentinel');
+    if (!sentinel || renderedProfileCount >= filteredProfiles.length) return;
+
+    const rect = sentinel.getBoundingClientRect();
+    if (rect.top <= window.innerHeight + 800) {
+        renderNextProfileBatch();
+    }
+}
+
+// 監視を解除する。監視要素は次回の再描画で再利用する
+function stopIncrementalRendering() {
+    if (loadMoreObserver) {
+        loadMoreObserver.disconnect();
+        loadMoreObserver = null;
+    }
+
+    if (fallbackScrollAttached) {
+        window.removeEventListener('scroll', handleFallbackScroll);
+        window.removeEventListener('resize', handleFallbackScroll);
+        fallbackScrollAttached = false;
+    }
 }
 
 // 価格バッジのクラスを取得
@@ -314,7 +432,6 @@ function createProfileCard(profile) {
     const forwardBadge = profile.forwardSupport ?
         '<div class="support-badge supported">順方向: 対応</div>' :
         '<div class="support-badge not-supported">順方向: 未対応</div>';
-
     const reverseBadge = profile.reverseSupport ?
         '<div class="support-badge supported">逆方向: 対応</div>' :
         '<div class="support-badge not-supported">逆方向: 未対応</div>';
@@ -326,7 +443,10 @@ function createProfileCard(profile) {
     // 画像のHTML（imageUrlがある場合のみ表示）
     const imageHtml = profile.imageUrl ?
         `<div class="profile-image">
-            <img src="${escapeHtml(profile.imageUrl)}" alt="${escapeHtml(profile.avatarName)}" loading="lazy">
+            <img src="${escapeHtml(profile.imageUrl)}"
+                 alt="${escapeHtml(profile.avatarName)}"
+                 loading="lazy"
+                 decoding="async">
             ${notesBadge}
             ${officialBadge}
         </div>` :
@@ -346,7 +466,6 @@ function createProfileCard(profile) {
             <div class="profile-header">
                 <h3 class="profile-name">${createLink(profile.avatarName, profile.avatarNameUrl)}</h3>
             </div>
-
             <div class="profile-info">
                 <div class="info-row">
                     <span class="info-label">アバター作者</span>
@@ -372,14 +491,12 @@ function createProfileCard(profile) {
                     <span class="info-value">${profile.avatarPrice && profile.avatarPrice.trim() ? escapeHtml(profile.avatarPrice) + '円' : '未登録'}</span>
                 </div>
             </div>
-
             <div class="support-badges">
                 ${forwardBadge}
                 ${reverseBadge}
             </div>
-
             <div class="profile-footer">
-                ${profile.downloadLocation && profile.downloadLocation.trim() !== '' 
+                ${profile.downloadLocation && profile.downloadLocation.trim() !== ''
                     ? `<a href="${escapeHtml(profile.downloadLocation)}"
                          class="download-link"
                          target="_blank"
@@ -410,6 +527,8 @@ function updateCount() {
 // エラー表示
 function showError(message) {
     const container = document.getElementById('profilesContainer');
+    stopIncrementalRendering();
+
     if (container) {
         container.innerHTML = `
             <div class="empty-state">
