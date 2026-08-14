@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-14 04:21:23 JST",
+  "lastUpdated": "2026-08-15 00:42:17 JST",
   "profiles": [
     {
       "id": "001",
@@ -20194,6 +20194,35 @@
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": ""
+    },
+    {
+      "id": "1550",
+      "registeredDate": "2026-08-15",
+      "updatedDate": "2026-08-15",
+      "avatarName": "K02（ケーツー）",
+      "avatarNameUrl": "https://hoyhoycolo.booth.pm/items/8535247",
+      "profileVersion": "1.0",
+      "avatarAuthor": "ホイホイこーろ",
+      "avatarshopname": "ホイホイ工房",
+      "avatarAuthorUrl": "https://hoyhoycolo.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "エカケイソ",
+      "profileshopname": "エカシリコン",
+      "profileAuthorUrl": "https://ekasilicon.booth.pm/",
+      "official": false,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://ekasilicon.booth.pm/items/8712459",
+      "imageUrl": "https://booth.pximg.net/c/620x620/cc0d49e8-a900-4c91-89b0-0242c6c01e5b/i/8535247/2a64f7d2-4b8d-4c9e-bff2-90f5dd0663d0_base_resized.jpg",
+      "pricing": "単体有料",
+      "price": "500",
+      "avatarPrice": "6000",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "156",
