@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-19 22:55:39 JST",
+  "lastUpdated": "2026-08-20 00:08:17 JST",
   "profiles": [
     {
       "id": "001",
@@ -20513,6 +20513,35 @@
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": ""
+    },
+    {
+      "id": "1560",
+      "registeredDate": "2026-08-20",
+      "updatedDate": "2026-08-20",
+      "avatarName": "紗月-satsuki-",
+      "avatarNameUrl": "https://easternwind.booth.pm/items/8714064",
+      "profileVersion": "1.0",
+      "avatarAuthor": "willplus",
+      "avatarshopname": "Eastern Wind",
+      "avatarAuthorUrl": "https://easternwind.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "willplus",
+      "profileshopname": "Eastern Wind",
+      "profileAuthorUrl": "https://easternwind.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://easternwind.booth.pm/items/8714064",
+      "imageUrl": "https://booth.pximg.net/c/620x620/00074997-896d-4ef0-b224-3e1fff8a97e6/i/8714064/22eb17ce-5c21-400c-91cd-1bb8b3b2efe8_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "5500",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "157",
