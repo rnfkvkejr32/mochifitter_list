@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02 03:04:54 JST",
+  "lastUpdated": "2026-09-03 11:49:53 JST",
   "profiles": [
     {
       "id": "001",
@@ -21322,6 +21322,35 @@
       "saleStartDate": "2026-09-12",
       "saleEndDate": "2026-09-27",
       "salePrice": "4000",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
+    },
+    {
+      "id": "1586",
+      "registeredDate": "2026-09-03",
+      "updatedDate": "2026-09-03",
+      "avatarName": "Hustea ハスティ",
+      "avatarNameUrl": "https://salondot.booth.pm/items/8493617",
+      "profileVersion": "1.0",
+      "avatarAuthor": "SALON.",
+      "avatarshopname": "SALON.",
+      "avatarAuthorUrl": "https://salondot.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "SALON.",
+      "profileshopname": "SALON.",
+      "profileAuthorUrl": "https://salondot.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://salondot.booth.pm/items/8493617",
+      "imageUrl": "https://booth.pximg.net/c/620x620/24ba3e6b-07c7-431d-8327-286a844d4b49/i/8493617/75b340f0-a58e-402e-ba98-3bfbe983e610_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "5500",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
