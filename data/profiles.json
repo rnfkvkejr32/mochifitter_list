@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-03 11:49:53 JST",
+  "lastUpdated": "2026-09-03 11:58:33 JST",
   "profiles": [
     {
       "id": "001",
@@ -20865,7 +20865,7 @@
     {
       "id": "1571",
       "registeredDate": "2026-08-25",
-      "updatedDate": "2026-08-25",
+      "updatedDate": "2026-09-03",
       "avatarName": "Sivka",
       "avatarNameUrl": "https://discord.com/invite/GsUTwpmuUu",
       "profileVersion": "1.0",
@@ -20887,8 +20887,8 @@
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": "",
-      "forwardSupport": false,
-      "reverseSupport": false,
+      "forwardSupport": true,
+      "reverseSupport": true,
       "notes": ""
     },
     {
