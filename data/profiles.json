@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10 13:30:34 JST",
+  "lastUpdated": "2026-09-10 13:31:37 JST",
   "profiles": [
     {
       "id": "001",
@@ -20314,7 +20314,7 @@
     {
       "id": "1554",
       "registeredDate": "2026-08-19",
-      "updatedDate": "2026-08-19",
+      "updatedDate": "2026-09-10",
       "avatarName": "ねる-Neru-",
       "avatarNameUrl": "https://mememe-s.booth.pm/items/8725457",
       "profileVersion": "1.0",
@@ -20329,8 +20329,8 @@
       "downloadMethod": "Booth",
       "downloadLocation": "https://mememe-s.booth.pm/items/8725457",
       "imageUrl": "https://booth.pximg.net/c/620x620/4dec0316-2e0e-4b51-9645-8abbc059adaa/i/8725457/e70dd115-b9bc-493b-984c-cd7dce069179_base_resized.jpg",
-      "pricing": "アバター同梱",
-      "price": "-",
+      "pricing": "単体有料",
+      "price": "100",
       "avatarPrice": "350",
       "onSale": true,
       "saleStartDate": "2026-08-28",
