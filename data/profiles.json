@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16 15:40:38 JST",
+  "lastUpdated": "2026-09-17 23:59:08 JST",
   "profiles": [
     {
       "id": "001",
@@ -22104,6 +22104,35 @@
       "avatarPrice": "5000",
       "avatarshopname": "5Z6PBK",
       "profileshopname": "5Z6PBK"
+    },
+    {
+      "id": "1610",
+      "registeredDate": "2026-09-17",
+      "updatedDate": "2026-09-17",
+      "avatarName": "✨v2.0 アプデ作業中につき販売停止中ゆめみる",
+      "avatarNameUrl": "https://kululu3d.booth.pm/items/6585077",
+      "profileVersion": "1.0",
+      "avatarAuthor": "くるる/Kululu",
+      "avatarshopname": "くるるしっぽ",
+      "avatarAuthorUrl": "https://kululu3d.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "くるる/Kululu",
+      "profileshopname": "くるるしっぽ",
+      "profileAuthorUrl": "https://kululu3d.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://kululu3d.booth.pm/items/6585077",
+      "imageUrl": "https://booth.pximg.net/c/620x620/9b848a34-1709-48fa-bb41-14857176b13e/i/6585077/858f2ae6-c231-4954-b412-b206e5584b22_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "3500",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "162",
