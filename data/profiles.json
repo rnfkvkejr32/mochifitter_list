@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30 04:13:26 JST",
+  "lastUpdated": "2026-09-30 04:14:16 JST",
   "profiles": [
     {
       "id": "001",
@@ -22623,35 +22623,6 @@
       "saleStartDate": "",
       "saleEndDate": "",
       "salePrice": "",
-      "forwardSupport": true,
-      "reverseSupport": false,
-      "notes": ""
-    },
-    {
-      "id": "1627",
-      "registeredDate": "2026-09-29",
-      "updatedDate": "2026-09-29",
-      "avatarName": "リルフィ lilfy /",
-      "avatarNameUrl": "https://stellazysta.booth.pm/items/8499393",
-      "profileVersion": "1.0",
-      "avatarAuthor": "こめじちゃん",
-      "avatarshopname": "こめじちゃん",
-      "avatarAuthorUrl": "https://stellazysta.booth.pm/",
-      "bodyBase": "",
-      "profileAuthor": "エカケイソ",
-      "profileshopname": "エカシリコン",
-      "profileAuthorUrl": "https://ekasilicon.booth.pm/",
-      "official": false,
-      "downloadMethod": "Booth",
-      "downloadLocation": "https://ekasilicon.booth.pm/items/8904783",
-      "imageUrl": "https://booth.pximg.net/c/620x620/66744aec-0d66-4224-ba57-8be36c551cd5/i/8499393/93eee4f3-0767-44de-b019-323d98f64d90_base_resized.jpg",
-      "pricing": "単体有料",
-      "price": "500",
-      "avatarPrice": "6000",
-      "onSale": true,
-      "saleStartDate": "2026-09-29",
-      "saleEndDate": "2026-10-10",
-      "salePrice": "5500",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
