@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-04 12:51:57 JST",
+  "lastUpdated": "2026-10-04 12:52:40 JST",
   "profiles": [
     {
       "id": "001",
@@ -23107,11 +23107,11 @@
       "imageUrl": "https://booth.pximg.net/c/620x620/46092d08-a17b-4f8f-b926-525ed00db4aa/i/8814955/36dd3183-907e-42dd-97d9-ad87eba30b66_base_resized.jpg",
       "pricing": "アバター同梱",
       "price": "-",
-      "avatarPrice": "5000",
-      "onSale": false,
-      "saleStartDate": "",
-      "saleEndDate": "",
-      "salePrice": "",
+      "avatarPrice": "6000",
+      "onSale": true,
+      "saleStartDate": "2026-10-10",
+      "saleEndDate": "2026-10-17",
+      "salePrice": "5000",
       "forwardSupport": true,
       "reverseSupport": false,
       "notes": ""
