@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-02 05:29:30 JST",
+  "lastUpdated": "2026-11-02 05:36:24 JST",
   "profiles": [
     {
       "id": "001",
@@ -25282,6 +25282,35 @@
       "avatarPrice": "5000",
       "avatarshopname": "Beep-ON",
       "profileshopname": "Beep-ON"
+    },
+    {
+      "id": "1710",
+      "registeredDate": "2026-11-02",
+      "updatedDate": "2026-11-02",
+      "avatarName": "セール中ナツヲ/Natuwo",
+      "avatarNameUrl": "https://1032.booth.pm/items/9054896",
+      "profileVersion": "1.0",
+      "avatarAuthor": "新見ぽち",
+      "avatarshopname": "新見出力所",
+      "avatarAuthorUrl": "https://1032.booth.pm/",
+      "bodyBase": "",
+      "profileAuthor": "新見ぽち",
+      "profileshopname": "新見出力所",
+      "profileAuthorUrl": "https://1032.booth.pm/",
+      "official": true,
+      "downloadMethod": "Booth",
+      "downloadLocation": "https://1032.booth.pm/items/9054896",
+      "imageUrl": "https://booth.pximg.net/c/620x620/52717d91-274a-4613-bcdf-082537cc15ad/i/9054896/3997e35a-ba04-47c4-880d-68136d45762b_base_resized.jpg",
+      "pricing": "アバター同梱",
+      "price": "-",
+      "avatarPrice": "3500",
+      "onSale": false,
+      "saleStartDate": "",
+      "saleEndDate": "",
+      "salePrice": "",
+      "forwardSupport": true,
+      "reverseSupport": false,
+      "notes": ""
     },
     {
       "id": "172",
