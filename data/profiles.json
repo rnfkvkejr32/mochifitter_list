@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20 17:00:57 JST",
+  "lastUpdated": "2026-11-22 13:29:57 JST",
   "profiles": [
     {
       "id": "001",
@@ -25804,7 +25804,7 @@
     {
       "id": "1727",
       "registeredDate": "2026-11-15",
-      "updatedDate": "2026-11-15",
+      "updatedDate": "2026-11-22",
       "avatarName": "ヴィヴィアン Vivian",
       "avatarNameUrl": "https://seodea.booth.pm/items/8910263",
       "profileVersion": "1.0",
@@ -25819,15 +25819,15 @@
       "downloadMethod": "Booth",
       "downloadLocation": "https://seodea.booth.pm/items/8910263",
       "imageUrl": "https://booth.pximg.net/c/620x620/ed6ca20d-ef44-484f-ac33-ae047b1fc3d1/i/8910263/c93c601e-eb44-4e48-883a-aca5dc39cf91_base_resized.jpg",
-      "pricing": "アバター同梱",
-      "price": "-",
+      "pricing": "無料",
+      "price": "0",
       "avatarPrice": "6000",
       "onSale": true,
       "saleStartDate": "2026-11-20",
       "saleEndDate": "2026-12-04",
       "salePrice": "4500",
       "forwardSupport": true,
-      "reverseSupport": false,
+      "reverseSupport": true,
       "notes": ""
     },
     {
